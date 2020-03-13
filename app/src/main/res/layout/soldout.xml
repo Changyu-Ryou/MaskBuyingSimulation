@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/notiLayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/noti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="30dp"
+                android:background="#403C3C"
+                android:elevation="0dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notiLayer"
+            android:background="#ffffff">
+
+            <ImageButton
+                android:id="@+id/logo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:background="#00000000"
+                android:elevation="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo" />
+
+            <ImageButton
+
+                android:id="@+id/searchBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:background="#00000000"
+                android:elevation="0dp"
+                android:src="@drawable/ic_search_black_24dp" />
+
+
+            <TextView
+
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:background="@color/emartYellow"
+                android:elevation="-1dp"
+                android:gravity="center"
+                android:text="Dev_R Factory"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_below="@id/titlebar"
+            android:background="#000323" />
+
+
+        <RelativeLayout
+            android:id="@+id/namelayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:text="데브류 KF94 마스크 구매 연습기"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/banner"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/name"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/star"
+                android:src="@drawable/plusbanner" />
+
+            <ImageView
+                android:id="@+id/star"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/name"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:text="17,900 원"
+                android:textSize="25sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/soldtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/namelayer">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:background="#F7FAFC"
+                android:gravity="center"
+                android:text="이 상품은 현재 구매하실 수 없는 상품이며,\n재입고 시 구매가 가능합니다."
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/buyingtap"
+        android:layout_above="@id/adlayer"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="40dp"
+        android:background="@color/unchoose" >
+
+
+            <TextView
+                android:onClick="buy"
+                android:id="@+id/buy"
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:text="구매하기"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_centerVertical="true"
+                android:background="#00C73C"/>
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="35dp"
+            android:text="장바구니"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:layout_toRightOf="@id/buy"
+            android:layout_centerVertical="true"
+            android:background="#ffffff"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buyplus"
+        android:visibility="gone"
+        android:layout_above="@id/buyingtap"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#DEDEDE" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ffffff"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="수량선택                                            1"/>
+
+
+
+
+    </RelativeLayout>
+
+
+        <ImageButton
+
+            android:id="@+id/refresh"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_above="@id/adlayer"
+            android:onClick="refresh"
+            android:layout_alignParentRight="true"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/renew11" />
+
+
+
+
+        <RelativeLayout
+
+            android:id="@+id/adlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"></com.google.android.gms.ads.AdView>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+        <TextView
+            android:id="@+id/retext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:layout_centerInParent="true"
+            android:text="새로\n고침"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

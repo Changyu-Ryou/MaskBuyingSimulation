@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:background="#F2F4F7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/notiLayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/noti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="30dp"
+                android:background="#403C3C"
+                android:elevation="0dp" />
+
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_below="@id/notiLayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="#ffffff">
+
+            <ImageButton
+                android:id="@+id/logo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:background="#00000000"
+                android:elevation="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo" />
+
+            <ImageButton
+
+                android:id="@+id/searchBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:background="#00000000"
+                android:elevation="0dp"
+                android:src="@drawable/ic_close_black_24dp" />
+
+
+            <TextView
+
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:background="#03CF5D"
+                android:elevation="-1dp"
+                android:gravity="center"
+                android:text="결제연습하기"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/shipping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlebar"
+        android:background="#ffffff">
+
+        <RelativeLayout
+
+            android:id="@+id/shipping1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/locicon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_location_on_black_24dp"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_toRightOf="@id/locicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="배송지정보"
+                android:textSize="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+
+            android:id="@+id/shipping2"
+            android:layout_below="@id/shipping1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="아무개(아무개)\n010-1234-5678 | 010-5678-1234\n경기도 수원시 영통구 이의동 123-12\n(98765)"
+                android:layout_alignParentLeft="true"
+                android:textSize="17dp"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/shipping3"
+            android:layout_below="@id/shipping2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F3F3F3">
+
+            <ImageView
+                android:id="@+id/checkico"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_check_box_black_24dp"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/checkico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="안심번호 사용하기"
+
+                android:textSize="17dp"
+                android:layout_marginBottom="10dp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/shipping4"
+            android:layout_below="@id/shipping3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#55C964"
+                android:text="결제도 너가!, 배송지 입력은 내가!"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_below="@id/text1"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="지금 고른 상품 떠넘기기 >"
+
+                android:textSize="17dp"
+                android:layout_marginBottom="10dp"/>
+
+             </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/person"
+            android:background="#ffffff"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="1dp"
+            android:layout_below="@id/shipping">
+
+            <ImageView
+                android:id="@+id/pericon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_person_black_24dp"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_toRightOf="@id/pericon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="배송지정보"
+                android:textSize="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                />
+
+
+        </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/person2"
+                    android:background="#ffffff"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/person">
+
+                    <ImageView
+                        android:id="@+id/shopicon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/ic_shop_black_24dp"
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_toRightOf="@id/shopicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="주문상품정보"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_centerVertical="true"
+                        />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/person3"
+                    android:background="#ffffff"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_below="@id/person2">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="데브류 KF94 마스크 구매 연습"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="15dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/free"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="무료"
+                        android:textSize="13dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageView
+                        android:layout_toLeftOf="@id/free"
+                        android:id="@+id/caricon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/ic_local_shipping_black_24dp"
+                        android:scaleType="fitXY"
+                        android:layout_marginRight="10dp"/>
+
+                </RelativeLayout>
+
+
+
+
+
+                <!--사진 붙여넣은 공간-->
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/person4"
+                android:background="#ffffff"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_below="@id/person3">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/buylast"/>
+
+            </RelativeLayout>
+
+
+
+
+                <!--결제 수단 고르기-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/person5"
+                android:background="#ffffff"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/person4">
+
+
+                <ImageView
+                    android:id="@+id/cardicon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="1dp"
+                    android:src="@drawable/ic_credit_card_black_24dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_toRightOf="@id/cardicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="결제정보"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+
+
+
+                <!--계좌거래 탭-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/persons1"
+                    android:background="#ffffff"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_below="@id/cardicon">
+
+
+                    <ImageView
+                        android:id="@+id/ciecleicon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/ic_radio_button_unchecked_black_24dp"
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_toRightOf="@id/ciecleicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="계좌 간편결제"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                </RelativeLayout>
+
+
+
+
+                <!--카드결제 탭-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/persons2"
+                    android:background="#ffffff"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:onClick="card"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/persons1">
+
+
+                    <ImageView
+                        android:id="@+id/ciecleicon1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/ic_radio_button_checked_black_24dp"
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_toRightOf="@id/ciecleicon1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="카드 간편결제"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        />
+
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+                <!--카드결제탭 카드 사진-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/persons3"
+                    android:background="#ffffff"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/persons2">
+
+
+                <ImageView
+                    android:id="@+id/card"
+                    android:layout_width="200dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/black"
+                    android:layout_marginTop="15dp"
+
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="일시불"
+                    android:layout_below="@id/card"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"/>
+
+                </RelativeLayout>
+
+
+
+                <!--일반결제 탭-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/persons4"
+                    android:onClick="normal"
+                    android:background="#ffffff"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/persons3">
+
+
+                    <ImageView
+                        android:id="@+id/ciecleicon2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/ic_radio_button_unchecked_black_24dp"
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_toRightOf="@id/ciecleicon2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="일반결제"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        />
+
+                </RelativeLayout>
+
+
+
+                <!--일반 결제 안에 내용들 invisible-->
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/persons5"
+                    android:background="#ffffff"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/persons4">
+
+                    <RelativeLayout
+                        android:id="@+id/paymethod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <TextView
+                            android:id="@+id/sincard"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
+                            android:text="신용카드"
+                            android:onClick="sincard"
+                            android:gravity="center"
+                            android:textSize="15dp"
+                            android:background="#00C73C"/>
+                        <TextView
+                            android:id="@+id/phone"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:text="휴대폰"
+                            android:onClick="phone"
+                            android:gravity="center"
+                            android:textSize="15dp"
+                            android:background="#E9ECEF"/>
+                        <TextView
+                            android:id="@+id/plater"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:text="나중에 결제"
+                            android:gravity="center"
+                            android:onClick="paylater"
+                            android:textSize="15dp"
+                            android:background="#E9ECEF"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_below="@id/paymethod"
+                        android:id="@+id/najoong"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="나중에 카드결제"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:textSize="5dp"
+                        android:background="#ffffff"/>
+
+                    <TextView
+                        android:layout_below="@id/paymethod"
+                        android:id="@+id/najoong2"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="나중에 카드결제"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:textSize="15dp"
+                        android:background="#ffffff"/>
+
+
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+
+                <!--전체 동의 라디오 버튼-->
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/person6"
+                    android:background="#ffffff"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/person5">
+
+
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:textSize="15dp"
+                        android:text="전체 동의하기" />
+
+                </RelativeLayout>
+
+
+
+
+                <!--결제하기 버튼-->
+
+            <RelativeLayout
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/person7"
+                android:background="#ffffff"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/person6">
+
+
+                <TextView
+                    android:onClick="finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="결제하기"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="#00C73C"
+                    android:paddingRight="80dp"
+                    android:paddingLeft="80dp"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:layout_centerHorizontal="true"/>
+
+
+            </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/person7"/>
+
+
+
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+
+
+    </RelativeLayout>
+</LinearLayout>
