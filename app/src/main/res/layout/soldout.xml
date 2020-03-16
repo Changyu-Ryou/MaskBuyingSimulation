@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:height="50dp"
-                android:background="@color/emartYellow"
+                android:background="#03CF5D"
                 android:elevation="-1dp"
                 android:gravity="center"
                 android:text="Dev_R Factory"
@@ -77,6 +77,8 @@
             android:layout_width="match_parent"
             android:layout_height="400dp"
             android:layout_below="@id/titlebar"
+            android:src="@drawable/mask_image"
+            android:scaleType="fitXY"
             android:background="#000323" />
 
 
@@ -237,7 +239,7 @@
             android:layout_height="wrap_content"
 
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"></com.google.android.gms.ads.AdView>
+            ads:adUnitId="ca-app-pub-7742126992195898/2952248938"></com.google.android.gms.ads.AdView>
 
         </RelativeLayout>
 

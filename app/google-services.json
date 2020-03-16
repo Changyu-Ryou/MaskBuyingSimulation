@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "397203757447",
+    "firebase_url": "https://mask-buy-38962225.firebaseio.com",
+    "project_id": "mask-buy-38962225",
+    "storage_bucket": "mask-buy-38962225.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397203757447:android:74a63c939900cefaa7db22",
+        "android_client_info": {
+          "package_name": "com.devr.practicebuying1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "397203757447-fsjpa8li3t0s02qnb1f8h9pgomd6nl6d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devr.practicebuying1",
+            "certificate_hash": "f486635bf0b6f533fbc19f49d028f9b66bf8fe25"
+          }
+        },
+        {
+          "client_id": "397203757447-e0ih76jujjpc730dnovqshh9ursc04ni.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB94A1KT9NwjyTAv2mIohHkQhNbA7-Yzb4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "397203757447-e0ih76jujjpc730dnovqshh9ursc04ni.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

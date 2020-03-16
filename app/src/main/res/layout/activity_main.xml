@@ -12,27 +12,9 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
-            android:id="@+id/notiLayer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ffffff">
-
-            <TextView
-                android:id="@+id/noti"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:height="30dp"
-                android:background="#403C3C"
-                android:elevation="0dp" />
-
-
-        </RelativeLayout>
-
-        <RelativeLayout
             android:id="@+id/titlebar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/notiLayer"
             android:background="#ffffff">
 
             <ImageButton
@@ -65,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:height="50dp"
-                android:background="@color/emartYellow"
+                android:background="#03CF5D"
                 android:elevation="-1dp"
                 android:gravity="center"
                 android:text="Dev_R Factory"
@@ -75,89 +57,100 @@
         </RelativeLayout>
 
 
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:layout_below="@id/titlebar"
-            android:background="#000323" />
-
-
         <RelativeLayout
             android:id="@+id/namelayer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/image">
+            android:layout_height="match_parent"
+            android:layout_above="@id/adView"
+            android:layout_below="@id/titlebar">
 
             <TextView
-                android:id="@+id/name"
+                android:id="@+id/titletext"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="15dp"
-                android:text="데브류 KF94 마스크 구매 연습기"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+                android:gravity="center_horizontal"
+                android:text="마스크 구매 가능할까요?"
+                android:textSize="30dp"/>
+
 
             <ImageView
-                android:id="@+id/banner"
-                android:layout_width="100dp"
-                android:layout_height="20dp"
-                android:layout_below="@id/name"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_toEndOf="@id/star"
-                android:src="@drawable/plusbanner" />
-
-            <ImageView
-                android:id="@+id/star"
-                android:layout_width="100dp"
-                android:layout_height="20dp"
-                android:layout_below="@id/name"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/star" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/name"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="15dp"
-                android:text="12,000 원"
-                android:textSize="25sp" />
-
-        </RelativeLayout>
-
-
-        <RelativeLayout
-            android:id="@+id/soldtext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/namelayer">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
-                android:background="#F7FAFC"
-                android:gravity="center"
-                android:text="이 상품은 현재 구매하실 수 없는 상품이며,\n재입고 시 구매가 가능합니다."
-                android:textSize="18sp" />
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/titletext"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/mainimage"
+                android:src="@drawable/medicalmask"
+                />
 
 
-            <Button
-                android:id="@+id/bb"
+
+            <TextView
+                android:id="@+id/scorerank"
+                android:layout_below="@id/mainimage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:onClick="bb"
-                android:text="bb"
-                android:textSize="30dp" />
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:text="연습만이 살 길이다!"
+                android:textSize="30dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/scorenow"
+                android:layout_below="@id/scorerank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:text="00 초"
+                android:textSize="30dp"
+                android:layout_marginTop="10dp"/>
+
+
+
+            <TextView
+                android:id="@+id/scoretext"
+                android:layout_below="@id/scorenow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="내 최고기록"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_below="@id/scoretext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="0.000 초"
+                android:textSize="30dp"
+                android:layout_marginTop="5dp"/>
+
+
+
+
 
 
         </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/startbtn"
+            android:layout_above="@id/adView"
+            android:layout_width="180dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="bottom"
+            android:src="@drawable/btn1"
+            android:textSize="30dp" />
+
 
 
         <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -167,8 +160,29 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"></com.google.android.gms.ads.AdView>
+            ads:adUnitId="ca-app-pub-7742126992195898/6481140843"></com.google.android.gms.ads.AdView>
 
+
+<!--
+
+         <Button
+            android:id="@+id/stop"
+            android:layout_above="@id/adView"
+            android:layout_toRightOf="@id/startbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:text="랭킹확인"
+            android:textSize="30dp" />
+
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/signInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+
+            -->
 
     </RelativeLayout>
 
