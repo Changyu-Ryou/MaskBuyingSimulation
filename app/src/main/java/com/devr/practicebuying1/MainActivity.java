@@ -53,7 +53,8 @@ import com.google.firebase.auth.PlayGamesAuthProvider;
 
 public class MainActivity extends AppCompatActivity {
     ImageButton btn_blue;
-    Button btn_stop;
+    ImageButton btn_info;
+    ImageButton btn_rank;
     MyTimer myTimer;
     private AdView mAdView;
     static TextView mEllapse;
@@ -145,6 +146,49 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        btn_rank= (ImageButton)findViewById(R.id.rankbtn);
+        btn_rank.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view)
+            {
+                //데이터 담아서 팝업(액티비티) 호출
+                Intent intent = new Intent(MainActivity.this, PopupActivity2.class);
+                intent.putExtra("data", "Test Popup");
+                startActivityForResult(intent, 1);
+
+            }
+        });
+
+
+
+
+
+        btn_info= (ImageButton)findViewById(R.id.infobtn);
+        btn_info.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view)
+            {
+                //데이터 담아서 팝업(액티비티) 호출
+                Intent intent = new Intent(MainActivity.this, PopupActivity.class);
+                intent.putExtra("data", "Test Popup");
+                startActivityForResult(intent, 1);
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         btn_blue = (ImageButton)findViewById(R.id.startbtn);
         btn_blue.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -166,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+/*
     // [START signin]
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
@@ -256,6 +300,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+*/
 
     String calcul(int num){
         String sEll = String.format("%02d:%02d:%02d", num / 1000 / 60, (num/1000)%60, (num %1000)/10);
@@ -316,14 +361,19 @@ public class MainActivity extends AppCompatActivity {
         finishCode=0;
 
 
-        if(((ell/1000)%60)>20&& (ell / 1000 / 60)<1){
+        if(((ell/1000)%60)<20&& (ell / 1000 / 60)<1){
 
 
             aa.setText("좀 하시는데요?\n조만간 마스크 복 터지시겠어요!");
 
-        }else if(((ell/1000)%60)>10&& (ell / 1000 / 60)<1){
+        }else if(((ell/1000)%60)<10&& (ell / 1000 / 60)<1){
 
             aa.setText("매크로세요?\n 신의 손!!!");
+        }else if(((ell/1000)%60)>20&& (ell / 1000 / 60)<1) {
+
+            aa.setText("아직 멀으셨네요\n분발하세요~");
+        }else{
+            aa.setText("이 정도로는 마스크를 못 사요!\n분발하세요~");
         }
         //mEllapse.getText();
         int buff =safeLongToInt(ell);

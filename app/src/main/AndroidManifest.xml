@@ -45,6 +45,11 @@
             android:name="com.devr.practicebuying1.Paying">
         </activity>
 
+        <!-- 팝업 Activity -->
+        <activity android:name=".PopupActivity" android:theme="@android:style/Theme.Dialog" />
+
+        <!-- 팝업 Activity -->
+        <activity android:name=".PopupActivity2" android:theme="@android:style/Theme.Dialog" />
 
 
 

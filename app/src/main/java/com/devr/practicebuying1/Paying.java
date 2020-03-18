@@ -57,6 +57,7 @@ public class Paying extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
+        //전면광고
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-7742126992195898/4787789370");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
